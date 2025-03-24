@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BDF41F78-0ADD-4508-9BEA-2E4A4C0DF345}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>INSTRUMENTS.My.MyApplication</StartupObject>
+    <RootNamespace>INSTRUMENTS</RootNamespace>
+    <AssemblyName>INSTRUMENTS_FOR_INVENTOR</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>INSTRUMENTS_FOR_INVENTOR.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>INSTRUMENTS_FOR_INVENTOR.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icoEandI.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="autodesk.inventor.interop, Version=26.2.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\WINDOWS\Microsoft.NET\assembly\GAC_MSIL\Autodesk.Inventor.Interop\v4.0_26.2.0.0__d84147f8b4276564\autodesk.inventor.interop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormInstruments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInstruments.Designer.vb">
+      <DependentUpon>FormInstruments.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInstrumentRotate.Designer.vb">
+      <DependentUpon>FormInstrumentRotate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInstrumentRotate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormInstruments.resx">
+      <DependentUpon>FormInstruments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInstrumentRotate.resx">
+      <DependentUpon>FormInstrumentRotate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <EmbeddedResource Include="Resources\PressureGauge.ipt" />
+    <EmbeddedResource Include="Resources\TurbimaxCUE21.ipt" />
+    <EmbeddedResource Include="Resources\TLarmatuur.ipt" />
+    <EmbeddedResource Include="Resources\PromagL400.ipt" />
+    <EmbeddedResource Include="Resources\ThermocouplePT100.ipt" />
+    <EmbeddedResource Include="Resources\PowerPoint.ipt" />
+    <EmbeddedResource Include="Resources\StandingElectricalCabinet.ipt" />
+    <EmbeddedResource Include="Resources\HangingElectricalCabinet.ipt" />
+    <EmbeddedResource Include="Resources\StreetLight.ipt" />
+    <EmbeddedResource Include="Resources\JuctionBox.ipt" />
+    <EmbeddedResource Include="Resources\PowerSwitch.ipt" />
+    <EmbeddedResource Include="Resources\CableLadder.ipt" />
+    <EmbeddedResource Include="Resources\CableLadderBend.ipt" />
+    <EmbeddedResource Include="Resources\CableLadderRiser.ipt" />
+    <EmbeddedResource Include="Resources\CableLadderTee.ipt" />
+    <EmbeddedResource Include="Resources\WireMeshCableTray.ipt" />
+    <EmbeddedResource Include="Resources\PowerDisconnect.ipt" />
+    <EmbeddedResource Include="Resources\PromagGroundDisk.ipt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CerabarPMC11.ipt" />
+    <EmbeddedResource Include="Resources\CerabarPMP11.ipt" />
+    <EmbeddedResource Include="Resources\CeraphantPTP31.ipt" />
+    <EmbeddedResource Include="Resources\CleanfitCPA450.ipt" />
+    <EmbeddedResource Include="Resources\CleanfitCPA871.ipt" />
+    <EmbeddedResource Include="Resources\CondumaxCLS21D.ipt" />
+    <EmbeddedResource Include="Resources\FlowfitCCA250.ipt" />
+    <EmbeddedResource Include="Resources\FlowfitCPA250.ipt" />
+    <EmbeddedResource Include="Resources\FlowmeterStubbe.ipt" />
+    <EmbeddedResource Include="Resources\IndumaxCLS50D.ipt" />
+    <EmbeddedResource Include="Resources\IndustrialThermometer.ipt" />
+    <EmbeddedResource Include="Resources\LiquilineCM444.ipt" />
+    <EmbeddedResource Include="Resources\LiquiphantFTL31.ipt" />
+    <EmbeddedResource Include="Resources\OrbisintCPS11D.ipt" />
+    <EmbeddedResource Include="Resources\OxymaxCOS61D.ipt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\CerabarPMC11.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\CerabarPMP11.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\CleanfitCPA450.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\CleanfitCPA871.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\Liquiline CM444.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\LiquiphantFTL31.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\OrbisintCPS11D.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\OxymaxCOS61D.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\Promag L400.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\Ceraphant-T-PTP31.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\CondumaxCLS21D.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\Indumax-CLS50D.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\FlowfitCCA250.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\FlowMeterDMF170.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\TurbimaxCUE21.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\PressureGauge.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\Industrial thermometer.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\Thermocouple.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\StandingCabinet.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\HangingCabinet.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\JunctionBox.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\Power switch.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\Power Disconnect.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\LightingArmature.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\StreetLight.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\Power-Point.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\WireMeshCableTray.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\CableLadder.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\CableLadderBend90gr.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\CableRiser.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pictures\CableLadderTee.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icoEandI.ico" />
+    <None Include="Pictures\Promag Ground Disk.JPG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
